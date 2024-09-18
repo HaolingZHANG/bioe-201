@@ -161,3 +161,13 @@ find /home/zhanh0m/ncbi_dataset/data/ -name "*.fna" -size +3M | wc -l
 ```text
 3
 ```
+
+### Clean
+
+```shell
+rm -r ncbi_dataset/
+rm README.md
+rm md5sum.txt
+rm bacteria_genomes_1980_2001.json
+rm summary.tsv
+```
