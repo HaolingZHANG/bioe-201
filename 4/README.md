@@ -40,3 +40,12 @@ find /home/zhanh0m/ncbi_dataset/data/ -name "*.fna" -type f | awk '{ system("pyt
 zip -r outputs-5.zip outputs-5/
 rm -r outputs-5
 ```
+
+## Question 6 evaluation using 14 complete bacterial genomes with minimum ORF length and RBS requirements.
+
+```shell
+mkdir outputs-6
+find /home/zhanh0m/ncbi_dataset/data/ -name "*.fna" -type f | awk '{ system("python gene_finder6.py --rbs AGGAGG --upstream 20 --length 100 --file " $0) }'
+zip -r outputs-6.zip outputs-6/
+rm -r outputs-6
+```
