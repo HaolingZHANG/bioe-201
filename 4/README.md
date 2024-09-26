@@ -29,5 +29,14 @@ mkdir outputs-4
 source /ibex/user/zhanh0m/venv/bio/bin/activate  # Haoling's bio-relevant virtual environment
 find /home/zhanh0m/ncbi_dataset/data/ -name "*.fna" -type f | awk '{ system("python gene_finder4.py --file " $0) }'
 zip -r outputs-4.zip outputs-4/
-rm -r output-4
+rm -r outputs-4
+```
+
+## Question 5 evaluation using 14 complete bacterial genomes (minimum ORF length = 100).
+
+```shell
+mkdir outputs-5
+find /home/zhanh0m/ncbi_dataset/data/ -name "*.fna" -type f | awk '{ system("python gene_finder5.py --length 100 --file " $0) }'
+zip -r outputs-5.zip outputs-5/
+rm -r outputs-5
 ```
